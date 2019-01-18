@@ -16,6 +16,7 @@
 
 package mmelsen.errorscore.raw.boundary;
 
+import mmelsen.errorscore.raw.entity.SensorMeasurement;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -40,6 +41,10 @@ import org.springframework.kafka.test.rule.EmbeddedKafkaRule;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDateTime;
+import java.time.ZoneId;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -54,7 +59,7 @@ import static org.assertj.core.api.Assertions.assertThat;
                 "spring.cloud.stream.kafka.streams.default.consumer.application-id=basic-word-count",
                 "spring.cloud.stream.kafka.streams.binder.configuration.commit.interval.ms=1000",
                 "spring.cloud.stream.kafka.streams.binder.configuration.default.key.serde=org.apache.kafka.common.serialization.Serdes$StringSerde",
-                "spring.cloud.stream.kafka.streams.binder.configuration.default.value.serde=org.apache.kafka.common.serialization.Serdes$StringSerde"})
+                "spring.cloud.stream.kafka.streams.binder.configuration.default.value.serde=mmelsen.errorscore.raw.entity.ErrorScoreSerde"})
 public class ConsumerTest {
 
     @ClassRule
@@ -87,13 +92,18 @@ public class ConsumerTest {
     @Test
     public void testKafkaStreamsWordCountProcessor() throws Exception {
         Map<String, Object> senderProps = KafkaTestUtils.producerProps(embeddedKafka);
-        DefaultKafkaProducerFactory<Integer, String> pf = new DefaultKafkaProducerFactory<>(senderProps);
+        DefaultKafkaProducerFactory<String, SensorMeasurement> pf = new DefaultKafkaProducerFactory<>(senderProps);
         try {
-            KafkaTemplate<Integer, String> template = new KafkaTemplate<>(pf, true);
+            KafkaTemplate<String, SensorMeasurement> template = new KafkaTemplate<>(pf, true);
             template.setDefaultTopic("error-score");
-            template.sendDefault("test1");
-            template.sendDefault("test2");
-            template.sendDefault("test3");
+            template.sendDefault(new SensorMeasurement( Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()), "test", 0.1, 0.3, 0.2));
+
+            Thread.sleep(2000);
+            template.sendDefault(new SensorMeasurement( Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()), "test", 0.3, 0.5, 0.2));
+
+            Thread.sleep(2000);
+            template.sendDefault(new SensorMeasurement( Date.from(LocalDateTime.now().atZone(ZoneId.systemDefault()).toInstant()), "test", 0.5, 0.7, 0.2));
+
             ConsumerRecords<String, String> cr = KafkaTestUtils.getRecords(consumer);
             assertThat(cr.count()).isGreaterThanOrEqualTo(1);
 

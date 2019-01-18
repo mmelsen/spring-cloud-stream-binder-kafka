@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820cf043-0902-4fd0-b42d-807ff1f9ad6f" name="Default" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScore.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScoreSerde.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/SensorMeasurement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -15,11 +19,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="161" column="29" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="29" />
+            <state relative-caret-position="498">
+              <caret line="161" column="21" lean-forward="true" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -55,34 +59,52 @@
       <file leaf-file-name="Consumer.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="27" selection-start-line="27" selection-end-line="27" />
+            <state relative-caret-position="289">
+              <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SensorMeasurementBinding.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/SensorMeasurementBinding.java">
+      <file leaf-file-name="SensorMeasurement.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/SensorMeasurement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="289">
+              <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ConsumerTest.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ErrorScore.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScore.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ConsumerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="338">
-              <caret line="111" selection-start-line="111" selection-end-line="111" />
+            <state relative-caret-position="298">
+              <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
             </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ErrorScoreSerde.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScoreSerde.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-754" />
           </provider>
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>jackson</find>
+    </findStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -93,10 +115,13 @@
         <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/AnomalyTimelineMiddlewareApplication.java" />
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/KafkaStreamsTestApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java" />
-        <option value="$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/SensorMeasurementBinding.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScore.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/SensorMeasurement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScoreSerde.java" />
+        <option value="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java" />
+        <option value="$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java" />
       </list>
     </option>
   </component>
@@ -180,7 +205,17 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="mmelsen" type="462c0819:PsiDirectoryNode" />
-              <item name="boundary" type="462c0819:PsiDirectoryNode" />
+              <item name="raw" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="anomaly-timeline-middleware" type="b2602c69:ProjectViewProjectNode" />
+              <item name="spring-cloud-stream-binder-kafka" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="mmelsen" type="462c0819:PsiDirectoryNode" />
+              <item name="raw" type="462c0819:PsiDirectoryNode" />
+              <item name="entity" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="anomaly-timeline-middleware" type="b2602c69:ProjectViewProjectNode" />
@@ -222,6 +257,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="mmelsen.errorscore.raw.entity" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -366,7 +406,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1547824095601</updated>
-      <workItem from="1547824098990" duration="1085000" />
+      <workItem from="1547824098990" duration="3074000" />
     </task>
     <servers />
   </component>
@@ -380,9 +420,18 @@
     <history-entry file="ConsumerTest - 2019.01.18 at 16h 25m 52s.xml">
       <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="ConsumerTest - 2019.01.18 at 16h 49m 06s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConsumerTest - 2019.01.18 at 16h 50m 04s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="ConsumerTest - 2019.01.18 at 16h 50m 49s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1085000" />
+    <option name="totallyTimeSpent" value="3074000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -393,14 +442,14 @@
       <window_info anchor="right" id="Palette&#9;" />
       <window_info anchor="bottom" id="Java Enterprise" />
       <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" visible="true" weight="0.32995737" />
+      <window_info anchor="right" id="Maven Projects" visible="true" weight="0.1705757" />
       <window_info anchor="bottom" id="Database Changes" show_stripe_button="false" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" />
       <window_info anchor="bottom" id="Spring" />
       <window_info anchor="bottom" id="Terminal" />
       <window_info id="Designer" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25" />
       <window_info anchor="right" id="Bean Validation" />
       <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
       <window_info id="Web" side_tool="true" />
@@ -408,7 +457,7 @@
       <window_info anchor="right" id="SciView" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.39935064" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39935064" />
       <window_info id="Favorites" side_tool="true" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -429,7 +478,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java</url>
-          <line>101</line>
+          <line>111</line>
           <properties />
         </line-breakpoint>
       </breakpoints>
@@ -437,13 +486,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/common/WebApplicationConfig.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
@@ -462,20 +504,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScore.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/SensorMeasurement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -500,37 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/SensorMeasurementBinding.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="111" selection-start-line="111" selection-end-line="111" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/KafkaStreamsTestApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -541,8 +538,65 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="161" column="29" selection-start-line="161" selection-start-column="29" selection-end-line="161" selection-end-column="29" />
+        <state relative-caret-position="498">
+          <caret line="161" column="21" lean-forward="true" selection-start-line="161" selection-start-column="21" selection-end-line="161" selection-end-column="29" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/KafkaStreamsTestApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="5" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/SensorMeasurementBinding.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="37" selection-start-line="15" selection-start-column="37" selection-end-line="15" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/SensorMeasurement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="23" column="13" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScoreSerde.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-754" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/entity/ErrorScore.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="16" column="13" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="1" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="28" column="44" selection-start-line="28" selection-start-column="44" selection-end-line="28" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="98" column="18" lean-forward="true" selection-start-line="98" selection-start-column="18" selection-end-line="98" selection-end-column="18" />
         </state>
       </provider>
     </entry>
