@@ -31,6 +31,7 @@ import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.cloud.stream.binder.kafka.streams.InteractiveQueryService;
 import org.springframework.cloud.stream.binder.kafka.streams.QueryableStoreRegistry;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
@@ -40,7 +41,8 @@ import org.springframework.kafka.test.rule.EmbeddedKafkaRule;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 import org.springframework.test.context.junit4.SpringRunner;
 
-import java.util.Map;
+import java.util.*;
+import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -53,6 +55,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 //                "spring.cloud.stream.bindings.output.destination=counts",
                 "spring.cloud.stream.kafka.streams.default.consumer.application-id=basic-word-count",
                 "spring.cloud.stream.kafka.streams.binder.configuration.commit.interval.ms=1000",
+//                "spring.cloud.stream.kafka.streams.binder.configuration.cache.max.bytes.buffering=0",
                 "spring.cloud.stream.kafka.streams.binder.configuration.default.key.serde=org.apache.kafka.common.serialization.Serdes$StringSerde",
                 "spring.cloud.stream.kafka.streams.binder.configuration.default.value.serde=org.apache.kafka.common.serialization.Serdes$StringSerde"})
 public class ConsumerTest {
@@ -65,7 +68,10 @@ public class ConsumerTest {
     private static Consumer<String, String> consumer;
 
     @Autowired
-    private QueryableStoreRegistry queryableStoreRegistry;
+    private InteractiveQueryService interactiveQueryService;
+
+    @Autowired
+    private InteractiveQueryService queryableStoreRegistry;
 
     @BeforeClass
     public static void setUp() throws Exception {
@@ -92,21 +98,58 @@ public class ConsumerTest {
             KafkaTemplate<Integer, String> template = new KafkaTemplate<>(pf, true);
             template.setDefaultTopic("error-score");
             template.sendDefault("test1");
+            template.sendDefault("test11");
+            template.sendDefault("test111");
+            Thread.sleep(3000);
             template.sendDefault("test2");
+            template.sendDefault("test22");
+            template.sendDefault("test222");
+            template.sendDefault("test2222");
+            Thread.sleep(3000);
             template.sendDefault("test3");
+            template.sendDefault("test33");
+            template.sendDefault("test333");
+            template.sendDefault("test3333");
+            template.sendDefault("test33333");
+
+            Thread.sleep(3000);
+            template.sendDefault("test4");
+
+            Thread.sleep(3000);
+            template.sendDefault("test5");
             ConsumerRecords<String, String> cr = KafkaTestUtils.getRecords(consumer);
             assertThat(cr.count()).isGreaterThanOrEqualTo(1);
 
-
-            // IDEALLY I WANT TO VERIFY THE CONTENTS OF THE STORE
-            ReadOnlyWindowStore<String, String> localStore = queryableStoreRegistry.getQueryableStoreType("store",  QueryableStoreTypes.windowStore());
+            Thread.sleep(2000);
+            ReadOnlyWindowStore<String, String> localStore = queryableStoreRegistry.getQueryableStore("store",  QueryableStoreTypes.windowStore());
             KeyValueIterator<Windowed<String>, String> all = localStore.all();
 
+            HashMap<Long, List<String>> result = new HashMap<>();
             while(all.hasNext()) {
 
                 KeyValue<Windowed<String>, String> next = all.next();
-                System.out.println(next.key + " : " + next.value);
+                long startMs = next.key.window().start();
+                long endMs = next.key.window().end();
+
+                List<String> s = result.get(startMs);
+                if(s == null) {
+                    result.put(startMs, Arrays.asList(next.value));
+                }
+                else {
+                    List<String> stringList = result.get(startMs);
+
+                    List<String> temp = stringList.stream()
+                            .collect(Collectors.toList());
+
+                    temp.add(next.value);
+                    result.put(startMs,temp);
+                }
             }
+            result.entrySet().stream().forEach(e-> {
+                System.out.println(new Date(e.getKey()));
+                result.get(e.getKey()).forEach(s -> System.out.println(s));
+            });
+
         }
         finally {
             pf.destroy();
