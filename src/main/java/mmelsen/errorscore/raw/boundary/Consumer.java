@@ -23,18 +23,19 @@ public class Consumer {
                 .map((k,v) -> new KeyValue<>(v, v))
                 .groupByKey()
                 .windowedBy(TimeWindows.of(5000))
-                .reduce((aggValue, newValue) -> {
+                /*.reduce((aggValue, newValue) -> {
                     System.out.println("aggValue: " + aggValue);
                     System.out.println("newValue: " + newValue);
                     if(aggValue.endsWith("1")) {
-                        return newValue;
+                        return "testertje";
                     }
                     else {
                         System.out.println("keeping aggValue: " + aggValue );
                         return aggValue;
                     }
 
-                }, (store));
+                }, (store));*/
+                .reduce((aggValue, newValue) -> "michael:" + newValue, store);
 
 
     }

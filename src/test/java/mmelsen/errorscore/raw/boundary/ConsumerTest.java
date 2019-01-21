@@ -55,7 +55,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 //                "spring.cloud.stream.bindings.output.destination=counts",
                 "spring.cloud.stream.kafka.streams.default.consumer.application-id=basic-word-count",
                 "spring.cloud.stream.kafka.streams.binder.configuration.commit.interval.ms=1000",
-//                "spring.cloud.stream.kafka.streams.binder.configuration.cache.max.bytes.buffering=0",
+                "spring.cloud.stream.kafka.streams.binder.configuration.cache.max.bytes.buffering=0",
                 "spring.cloud.stream.kafka.streams.binder.configuration.default.key.serde=org.apache.kafka.common.serialization.Serdes$StringSerde",
                 "spring.cloud.stream.kafka.streams.binder.configuration.default.value.serde=org.apache.kafka.common.serialization.Serdes$StringSerde"})
 public class ConsumerTest {
@@ -149,6 +149,16 @@ public class ConsumerTest {
                 System.out.println(new Date(e.getKey()));
                 result.get(e.getKey()).forEach(s -> System.out.println(s));
             });
+
+
+            ReadOnlyWindowStore<String, String> store = queryableStoreRegistry.getQueryableStore("store",  QueryableStoreTypes.windowStore());
+            KeyValueIterator<Windowed<String>, String> storeIter = store.all();
+            System.out.println("extra test ------------------------------------------");
+            while(storeIter.hasNext()) {
+
+                KeyValue<Windowed<String>, String> next = storeIter.next();
+                System.out.println(next.key + " : " + next.value);
+            }
 
         }
         finally {
