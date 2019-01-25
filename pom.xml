@@ -3,19 +3,18 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.wartsila.asset-management</groupId>
-    <artifactId>anomaly-timeline-middleware</artifactId>
+    <groupId>mmelsen</groupId>
+    <artifactId>binder-test</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <packaging>jar</packaging>
 
-    <name>anomaly-timeline-middleware</name>
-    <description>Anomaly Timeline Middleware</description>
+    <name>binder-test</name>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <!--<version>2.1.2.RELEASE</version>-->
-        <version>2.1.0.BUILD-SNAPSHOT</version>
+        <version>2.1.2.RELEASE</version>
+        <!--<version>2.1.0.BUILD-SNAPSHOT</version>-->
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
@@ -24,7 +23,7 @@
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <java.version>1.8</java.version>
         <!--<spring-cloud.version>Greenwich.RC2</spring-cloud.version>-->
-        <spring-cloud-stream.version>Fishtown.BUILD-SNAPSHOT</spring-cloud-stream.version>
+        <spring-cloud-stream.version>Fishtown.RELEASE</spring-cloud-stream.version>
     </properties>
 
     <dependencyManagement>

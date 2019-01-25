@@ -16,14 +16,20 @@
 
 package mmelsen.errorscore.raw.boundary;
 
+import mmelsen.ErrorScore;
+import mmelsen.LocalStore;
+import mmelsen.SensorMeasurement;
+import mmelsen.SensorMeasurementSerde;
 import org.apache.kafka.clients.consumer.Consumer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
+import org.apache.kafka.common.serialization.StringSerializer;
 import org.apache.kafka.streams.KeyValue;
 import org.apache.kafka.streams.kstream.Windowed;
 import org.apache.kafka.streams.state.KeyValueIterator;
 import org.apache.kafka.streams.state.QueryableStoreTypes;
 import org.apache.kafka.streams.state.ReadOnlyWindowStore;
+import org.apache.kafka.streams.state.WindowStoreIterator;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.ClassRule;
@@ -32,7 +38,6 @@ import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.cloud.stream.binder.kafka.streams.InteractiveQueryService;
-import org.springframework.cloud.stream.binder.kafka.streams.QueryableStoreRegistry;
 import org.springframework.kafka.core.DefaultKafkaConsumerFactory;
 import org.springframework.kafka.core.DefaultKafkaProducerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
@@ -41,23 +46,17 @@ import org.springframework.kafka.test.rule.EmbeddedKafkaRule;
 import org.springframework.kafka.test.utils.KafkaTestUtils;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.time.LocalDateTime;
+import java.time.Month;
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
 import java.util.*;
-import java.util.stream.Collectors;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(
-        webEnvironment = SpringBootTest.WebEnvironment.NONE,
-        properties = {"server.port=0",
-                "spring.jmx.enabled=false",
-                "spring.cloud.stream.bindings.error-score-in.destination=error-score",
-//                "spring.cloud.stream.bindings.output.destination=counts",
-                "spring.cloud.stream.kafka.streams.default.consumer.application-id=basic-word-count",
-                "spring.cloud.stream.kafka.streams.binder.configuration.commit.interval.ms=1000",
-                "spring.cloud.stream.kafka.streams.binder.configuration.cache.max.bytes.buffering=0",
-                "spring.cloud.stream.kafka.streams.binder.configuration.default.key.serde=org.apache.kafka.common.serialization.Serdes$StringSerde",
-                "spring.cloud.stream.kafka.streams.binder.configuration.default.value.serde=org.apache.kafka.common.serialization.Serdes$StringSerde"})
+        webEnvironment = SpringBootTest.WebEnvironment.NONE)
 public class ConsumerTest {
 
     @ClassRule
@@ -65,19 +64,16 @@ public class ConsumerTest {
 
     private static EmbeddedKafkaBroker embeddedKafka = embeddedKafkaRule.getEmbeddedKafka();
 
-    private static Consumer<String, String> consumer;
+    private static Consumer<String, ErrorScore> consumer;
 
     @Autowired
     private InteractiveQueryService interactiveQueryService;
-
-    @Autowired
-    private InteractiveQueryService queryableStoreRegistry;
 
     @BeforeClass
     public static void setUp() throws Exception {
         Map<String, Object> consumerProps = KafkaTestUtils.consumerProps("group", "false", embeddedKafka);
         consumerProps.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-        DefaultKafkaConsumerFactory<String, String> cf = new DefaultKafkaConsumerFactory<>(consumerProps);
+        DefaultKafkaConsumerFactory<String, ErrorScore> cf = new DefaultKafkaConsumerFactory<>(consumerProps);
         consumer = cf.createConsumer();
         embeddedKafka.consumeFromAnEmbeddedTopic(consumer, "error-score");
 
@@ -92,78 +88,130 @@ public class ConsumerTest {
 
     @Test
     public void testKafkaStreamsWordCountProcessor() throws Exception {
+
         Map<String, Object> senderProps = KafkaTestUtils.producerProps(embeddedKafka);
-        DefaultKafkaProducerFactory<Integer, String> pf = new DefaultKafkaProducerFactory<>(senderProps);
+        DefaultKafkaProducerFactory<String, SensorMeasurement> pf = new DefaultKafkaProducerFactory<>(senderProps, new StringSerializer(), new SensorMeasurementSerde().serializer());
+
+//        Map<String, Object> senderProps = KafkaTestUtils.producerProps(embeddedKafka);
+//        DefaultKafkaProducerFactory<Integer, String> pf = new DefaultKafkaProducerFactory<>(senderProps);
         try {
-            KafkaTemplate<Integer, String> template = new KafkaTemplate<>(pf, true);
+            KafkaTemplate<String, SensorMeasurement> template = new KafkaTemplate<>(pf, true);
+
             template.setDefaultTopic("error-score");
-            template.sendDefault("test1");
-            template.sendDefault("test11");
-            template.sendDefault("test111");
-            Thread.sleep(3000);
-            template.sendDefault("test2");
-            template.sendDefault("test22");
-            template.sendDefault("test222");
-            template.sendDefault("test2222");
-            Thread.sleep(3000);
-            template.sendDefault("test3");
-            template.sendDefault("test33");
-            template.sendDefault("test333");
-            template.sendDefault("test3333");
-            template.sendDefault("test33333");
+//            sendTestDataInWindows(template);
 
-            Thread.sleep(3000);
-            template.sendDefault("test4");
-
-            Thread.sleep(3000);
-            template.sendDefault("test5");
-            ConsumerRecords<String, String> cr = KafkaTestUtils.getRecords(consumer);
+            sendSensorMeasurement(new SensorMeasurement(getDate(20, 22, 01), "tag", 0.1, 0.2, 0.1), template);
+            sendSensorMeasurement(new SensorMeasurement(getDate(20, 23, 01), "tag", 0.2, 1.2, 0.2), template);
+            sendSensorMeasurement(new SensorMeasurement(getDate(21, 02, 01), "tag", 0.3, 0.5, 0.3), template);
+            sendSensorMeasurement(new SensorMeasurement(getDate(21, 10, 01), "tag", 0.4, 0.5, 0.4), template);
+            sendSensorMeasurement(new SensorMeasurement(getDate(21, 22, 01), "tag", 0.5, 0.5, 0.5), template);
+            sendSensorMeasurement(new SensorMeasurement(getDate(21, 23, 01), "tag", 0.6, 0.5, 0.6), template);
+            ConsumerRecords<String, ErrorScore> cr = KafkaTestUtils.getRecords(consumer);
             assertThat(cr.count()).isGreaterThanOrEqualTo(1);
 
             Thread.sleep(2000);
-            ReadOnlyWindowStore<String, String> localStore = queryableStoreRegistry.getQueryableStore("store",  QueryableStoreTypes.windowStore());
-            KeyValueIterator<Windowed<String>, String> all = localStore.all();
 
-            HashMap<Long, List<String>> result = new HashMap<>();
-            while(all.hasNext()) {
-
-                KeyValue<Windowed<String>, String> next = all.next();
-                long startMs = next.key.window().start();
-                long endMs = next.key.window().end();
-
-                List<String> s = result.get(startMs);
-                if(s == null) {
-                    result.put(startMs, Arrays.asList(next.value));
-                }
-                else {
-                    List<String> stringList = result.get(startMs);
-
-                    List<String> temp = stringList.stream()
-                            .collect(Collectors.toList());
-
-                    temp.add(next.value);
-                    result.put(startMs,temp);
-                }
-            }
-            result.entrySet().stream().forEach(e-> {
-                System.out.println(new Date(e.getKey()));
-                result.get(e.getKey()).forEach(s -> System.out.println(s));
-            });
-
-
-            ReadOnlyWindowStore<String, String> store = queryableStoreRegistry.getQueryableStore("store",  QueryableStoreTypes.windowStore());
-            KeyValueIterator<Windowed<String>, String> storeIter = store.all();
+            ReadOnlyWindowStore<String, ErrorScore> store = interactiveQueryService.getQueryableStore(LocalStore.ONE_DAY_STORE.getStoreName(),  QueryableStoreTypes.windowStore());
+            KeyValueIterator<Windowed<String>, ErrorScore> storeIter = store.all();
             System.out.println("extra test ------------------------------------------");
             while(storeIter.hasNext()) {
 
-                KeyValue<Windowed<String>, String> next = storeIter.next();
-                System.out.println(next.key + " : " + next.value);
+                KeyValue<Windowed<String>, ErrorScore> next = storeIter.next();
+                System.out.println(next.key.toString() + " : " + next.value.toString());
             }
 
+//            ReadOnlyWindowStore<String, ErrorScore> localStore = interactiveQueryService.getQueryableStore("store",  QueryableStoreTypes.windowStore());
+
+            ReadOnlyWindowStore<String, ErrorScore> oneHourStore = interactiveQueryService.getQueryableStore(LocalStore.ONE_HOUR_STORE.getStoreName(),  QueryableStoreTypes.windowStore());
+
+            System.out.println("------------------------------------");
+            System.out.println("One hour ---------------------------");
+            System.out.println("------------------------------------");
+            WindowStoreIterator<ErrorScore> oneHourIter = oneHourStore.fetch("null::tag", getDate(20, 21, 00).getTime(), getDate(29, 21, 00).getTime());
+
+            while(oneHourIter.hasNext()) {
+                KeyValue<Long, ErrorScore> next = oneHourIter.next();
+                System.out.println(next.value.getTimestamp() + " " + next.value.getErrorSignal());
+            }
+
+            System.out.println("------------------------------------");
+            System.out.println("Six hour ---------------------------");
+            System.out.println("------------------------------------");
+            ReadOnlyWindowStore<String, ErrorScore> sixHourStore = interactiveQueryService.getQueryableStore(LocalStore.SIX_HOUR_STORE.getStoreName(),  QueryableStoreTypes.windowStore());
+            WindowStoreIterator<ErrorScore> sixHourIter = sixHourStore.fetch("null::tag", getDate(20, 21, 00).getTime(), getDate(29, 21, 00).getTime());
+
+            int cnt = 0;
+            while(sixHourIter.hasNext()) {
+                KeyValue<Long, ErrorScore> next = sixHourIter.next();
+                System.out.println(next.value.getTimestamp() + " " + next.value.getErrorSignal());
+                cnt++;
+            }
+            assertThat(cnt == 3);
+
+            System.out.println("------------------------------------");
+            System.out.println("Twelve hour ------------------------");
+            System.out.println("------------------------------------");
+            ReadOnlyWindowStore<String, ErrorScore> twelveHourStore = interactiveQueryService.getQueryableStore(LocalStore.TWELVE_HOURS_STORE.getStoreName(),  QueryableStoreTypes.windowStore());
+            WindowStoreIterator<ErrorScore> twelveHourIter = twelveHourStore.fetch("null::tag", getDate(20, 21, 00).getTime(), getDate(29, 21, 00).getTime());
+
+            cnt = 0;
+            while(twelveHourIter.hasNext()) {
+                KeyValue<Long, ErrorScore> next = twelveHourIter.next();
+                System.out.println(next.value.getTimestamp() + " " + next.value.getErrorSignal());
+                cnt++;
+            }
+            assertThat(cnt = 2);
+
+            System.out.println("------------------------------------");
+            System.out.println("One day ----------------------------");
+            System.out.println("------------------------------------");
+            ReadOnlyWindowStore<String, ErrorScore> oneDayStore = interactiveQueryService.getQueryableStore(LocalStore.ONE_DAY_STORE.getStoreName(),  QueryableStoreTypes.windowStore());
+            WindowStoreIterator<ErrorScore> oneDayIter = oneDayStore.fetch("null::tag", getDate(19, 21, 00).getTime(), getDate(29, 21, 00).getTime());
+
+            while(oneDayIter.hasNext()) {
+                KeyValue<Long, ErrorScore> next = oneDayIter.next();
+                System.out.println(next.value.getTimestamp() + " " + next.value.getErrorSignal());
+            }
         }
         finally {
             pf.destroy();
         }
+
+
     }
 
+    public void sendSensorMeasurement(SensorMeasurement sm, KafkaTemplate template) {
+        template.sendDefault(sm);
+
+    }
+
+    public Date getDate(int day, int hour, int minute) {
+
+        LocalDateTime ldt = LocalDateTime.of(2019, Month.JANUARY, day, hour, minute, 40);
+        ZonedDateTime zdt = ldt.atZone(ZoneId.systemDefault());
+        return Date.from(zdt.toInstant());
+    }
+
+    public void sendTestDataInWindows(KafkaTemplate<String, SensorMeasurement> template) {
+/*        template.sendDefault("test1");
+        template.sendDefault("test11");
+        template.sendDefault("test111");
+        Thread.sleep(3000);
+        template.sendDefault("test2");
+        template.sendDefault("test22");
+        template.sendDefault("test222");
+        template.sendDefault("test2222");
+        Thread.sleep(3000);
+        template.sendDefault("test3");
+        template.sendDefault("test33");
+        template.sendDefault("test333");
+        template.sendDefault("test3333");
+        template.sendDefault("test33333");
+
+        Thread.sleep(3000);
+        template.sendDefault("test4");
+
+        Thread.sleep(3000);
+        template.sendDefault("test5");*/
+    }
 }
