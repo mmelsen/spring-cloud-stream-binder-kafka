@@ -106,6 +106,8 @@ public class ConsumerTest {
             sendSensorMeasurement(new SensorMeasurement(getDate(21, 10, 01), "tag", 0.4, 0.5, 0.4), template);
             sendSensorMeasurement(new SensorMeasurement(getDate(21, 22, 01), "tag", 0.5, 0.5, 0.5), template);
             sendSensorMeasurement(new SensorMeasurement(getDate(21, 23, 01), "tag", 0.6, 0.5, 0.6), template);
+            sendSensorMeasurement(new SensorMeasurement(getDate(22, 23, 01), "tag", 0.6, 0.5, 0.7), template);
+            sendSensorMeasurement(new SensorMeasurement(getDate(23, 23, 01), "tag", 0.6, 0.5, 0.7), template);
             ConsumerRecords<String, ErrorScore> cr = KafkaTestUtils.getRecords(consumer);
             assertThat(cr.count()).isGreaterThanOrEqualTo(1);
 

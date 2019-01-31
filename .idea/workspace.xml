@@ -2,113 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="820cf043-0902-4fd0-b42d-807ff1f9ad6f" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_2_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_context_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_core_2_0_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_kafka_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_kafka_core_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_kafka_streams_2_1_0_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/ErrorScore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/ErrorScoreSerde.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/ErrorScoreTimestampExtractor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/LocalStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/SensorMeasurement.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/mmelsen/SensorMeasurementSerde.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jdk8_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_datatype_jackson_datatype_jsr310_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_7.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_parameter_names_2_9_8.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_1_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_micrometer_micrometer_core_1_1_2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_buffer_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http2_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_http_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_codec_socks_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_common_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_handler_proxy_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_resolver_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_epoll_linux_x86_64_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_29_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_netty_netty_transport_native_unix_common_4_1_31_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_0_8_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_netty_reactor_netty_0_8_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_2_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__io_projectreactor_reactor_core_3_2_5_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_1_9_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_3.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_bytebuddy_byte_buddy_agent_1_9_7.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_connect_api_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_connect_api_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_connect_json_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_connect_json_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_test_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_2_11_test_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_test_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_clients_test_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_streams_2_0_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_kafka_kafka_streams_2_0_1.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_core_9_0_14.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_el_9_0_14.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_12.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_tomcat_embed_tomcat_embed_websocket_9_0_14.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_13_Final.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_hibernate_validator_hibernate_validator_6_0_14_Final.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_0.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_mockito_mockito_core_2_23_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_4.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_2_1_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_actuator_autoconfigure_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_autoconfigure_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_2_1_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_actuator_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_json_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_logging_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_reactor_netty_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_test_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_tomcat_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_validation_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_web_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_webflux_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_2_1_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_test_autoconfigure_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_context_2_0_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_function_core_2_0_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_kafka_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_kafka_core_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_cloud_spring_cloud_stream_binder_kafka_streams_2_1_0_BUILD_SNAPSHOT.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_core_5_1_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_jmx_5_1_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_jmx_5_1_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_integration_spring_integration_core_5_1_2_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_kafka_spring_kafka_2_2_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_kafka_spring_kafka_2_2_3_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_kafka_spring_kafka_test_2_2_0_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_kafka_spring_kafka_test_2_2_3_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_retry_spring_retry_1_2_3_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_beans_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_core_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_expression_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_jcl_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_aop_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_test_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_tx_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_web_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webflux_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_context_5_1_4_RELEASE.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_2_RELEASE.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_webmvc_5_1_4_RELEASE.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/anomaly-timeline-middleware.iml" beforeDir="false" afterPath="$PROJECT_DIR$/anomaly-timeline-middleware.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScoreSerde$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScoreSerde$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScoreSerde$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScoreSerde$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScoreSerde.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScoreSerde.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScoreTimestampExtractor.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/ErrorScoreTimestampExtractor.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/KafkaStreamsTestApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/KafkaStreamsTestApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/LocalStore.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/LocalStore.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/SensorMeasurement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/SensorMeasurement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/SensorMeasurementSerde$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/SensorMeasurementSerde$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/SensorMeasurementSerde$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/SensorMeasurementSerde$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/SensorMeasurementSerde.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/SensorMeasurementSerde.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/mmelsen/errorscore/raw/boundary/Consumer.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mmelsen/errorscore/raw/boundary/Consumer.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/test-classes/mmelsen/errorscore/raw/boundary/ConsumerTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/test-classes/mmelsen/errorscore/raw/boundary/ConsumerTest.class" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -132,8 +41,8 @@
       <file leaf-file-name="ConsumerTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="230">
-              <caret line="167" column="118" selection-start-line="167" selection-start-column="118" selection-end-line="167" selection-end-column="118" />
+            <state relative-caret-position="334">
+              <caret line="109" column="66" selection-start-line="109" selection-start-column="66" selection-end-line="109" selection-end-column="66" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -144,8 +53,8 @@
       <file leaf-file-name="application.properties" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+            <state relative-caret-position="289">
+              <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
             </state>
           </provider>
         </entry>
@@ -198,8 +107,8 @@
       <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="13" column="12" selection-end-line="280" />
+            <state relative-caret-position="272">
+              <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
             </state>
           </provider>
         </entry>
@@ -221,7 +130,12 @@
       <find>local</find>
       <find>runnin</find>
       <find>,</find>
+      <find>tsila</find>
     </findStrings>
+    <dirStrings>
+      <dir>C:\Dev\tmp\spring-cloud-stream-binder-kafka\src\main\java</dir>
+      <dir>C:\Dev\tmp\spring-cloud-stream-binder-kafka</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -238,11 +152,11 @@
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/SensorMeasurementSerde.java" />
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/ErrorScore.java" />
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/ErrorScoreSerde.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/errorscore/raw/boundary/Consumer.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/LocalStore.java" />
         <option value="$PROJECT_DIR$/src/main/java/mmelsen/ErrorScoreTimestampExtractor.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java" />
       </list>
     </option>
@@ -265,11 +179,11 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="anomaly-timeline-middleware" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="binder-test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="anomaly-timeline-middleware" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="binder-test" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -281,9 +195,9 @@
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-160" />
-    <option name="y" value="-9" />
-    <option name="width" value="1937" />
-    <option name="height" value="977" />
+    <option name="y" value="-10" />
+    <option name="width" value="1939" />
+    <option name="height" value="979" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -564,6 +478,10 @@
       <workItem from="1548145701087" duration="665000" />
       <workItem from="1548244861593" duration="4650000" />
       <workItem from="1548313522032" duration="43000" />
+      <workItem from="1548431035802" duration="784000" />
+      <workItem from="1548509489902" duration="466000" />
+      <workItem from="1548788158277" duration="1069000" />
+      <workItem from="1548921307087" duration="362000" />
     </task>
     <task id="LOCAL-00001" summary="reducer not being called">
       <created>1548060231508</created>
@@ -576,56 +494,57 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 12m 08s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.25 at 16h 45m 00s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 14m 22s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.25 at 16h 45m 18s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 19m 15s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.26 at 14h 37m 27s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 20m 45s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.26 at 14h 38m 40s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 21m 36s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.29 at 20h 02m 34s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 25m 42s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.29 at 20h 03m 25s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 31m 43s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.29 at 20h 03m 59s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 33m 41s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.31 at 08h 55m 54s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest_testKafkaStreamsWordCountProcessor - 2019.01.23 at 13h 34m 04s.xml">
-      <configuration name="ConsumerTest.testKafkaStreamsWordCountProcessor" configurationId="JUnit" />
+    <history-entry file="ConsumerTest - 2019.01.31 at 08h 57m 01s.xml">
+      <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="ConsumerTest - 2019.01.23 at 14h 00m 35s.xml">
+    <history-entry file="ConsumerTest - 2019.01.31 at 08h 58m 16s.xml">
       <configuration name="ConsumerTest" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32174000" />
+    <option name="totallyTimeSpent" value="34855000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" weight="0.32627118" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info anchor="bottom" id="Java Enterprise" order="7" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.13432837" />
+      <window_info anchor="right" id="Maven Projects" order="3" visible="true" weight="0.1337953" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.32950193" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.22318007" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.4047619" />
       <window_info anchor="bottom" id="Spring" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Designer" order="2" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20788912" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.21268657" />
       <window_info anchor="right" id="Bean Validation" order="3" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info id="Web" order="2" side_tool="true" />
@@ -641,7 +560,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32909605" />
-      <window_info anchor="bottom" id="Messages" order="7" weight="0.32627118" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -671,21 +589,15 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java</url>
-          <line>129</line>
+          <line>131</line>
           <properties />
           <option name="timeStamp" value="27" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java</url>
-          <line>139</line>
+          <line>141</line>
           <properties />
           <option name="timeStamp" value="30" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java</url>
-          <line>168</line>
-          <properties />
-          <option name="timeStamp" value="31" />
         </line-breakpoint>
       </breakpoints>
       <option name="time" value="32" />
@@ -1055,22 +967,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="13" column="12" selection-end-line="280" />
+        <state relative-caret-position="272">
+          <caret line="16" column="6" selection-start-line="16" selection-start-column="6" selection-end-line="16" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state relative-caret-position="289">
+          <caret line="17" column="63" selection-start-line="17" selection-start-column="63" selection-end-line="17" selection-end-column="63" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/mmelsen/errorscore/raw/boundary/ConsumerTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="230">
-          <caret line="167" column="118" selection-start-line="167" selection-start-column="118" selection-end-line="167" selection-end-column="118" />
+        <state relative-caret-position="334">
+          <caret line="109" column="66" selection-start-line="109" selection-start-column="66" selection-end-line="109" selection-end-column="66" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1093,5 +1005,9 @@
         </settings>
       </state>
     </states>
+  </component>
+  <component name="mavenExecuteGoalHistory">
+    <option value="$PROJECT_DIR$" />
+    <option value="clean package" />
   </component>
 </project>
